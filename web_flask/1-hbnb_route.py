@@ -1,5 +1,4 @@
-#!/usr/bin/bash
-
+#!/usr/bin/python3
 """Starts a Flask web app
 Listens on 0.0.0.0, port 5000
 Routes:
@@ -20,12 +19,11 @@ def home():
 
 app.route('/hbnb', strict_slashes=False)
 def hbnb():
-    """just hbnb"""
+    """just HBNB"""
     return "HBNB"
 
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port="5000")
-
 
 
