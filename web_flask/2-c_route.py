@@ -3,6 +3,7 @@
 Routes:
     / - display "Hello HBNB!"
     /hbnb - display "HBNB"
+    /c/<text> - display "C <text>"
 """
 from flask import Flask
 
@@ -23,10 +24,10 @@ def hbnb():
 
 @app.route('/c/<string:text>', strict_slashes=False)
 def c_text(text):
-    """Print a variable name as well"""
-    rep = text.replace("_", " ")
-    return f'c {rep}'
+    """prints C followed by <text> content"""
+    text = text.replace("_", " ")
+    return "C %s" % text
 
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port="5000")
+    app.run(host="0.0.0.0")
