@@ -1,10 +1,9 @@
 #!/usr/bin/python3
-""" Function that compress a folder """
 from datetime import datetime
 from fabric.api import local
 import os
 
-
+""" Function that compress a folder """
 def do_pack():
     try:
         if not os.path.exists("versions"):
